@@ -12,5 +12,7 @@ app.use(express.static('public'));
 const io = socket(server);
 
 io.on('connection',function(socket){
-    console.log('We have user connected !');
+    console.log('We have a user connected !');
+    let date = new Date().toTimeString();
+    socket.on('Latest Time', () => {io.to(socket.id).emit('New Time', date)});
 });

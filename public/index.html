@@ -4,7 +4,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
   </head>
   <body>
-    <button onclick="getElementById('timestamp').innerHTML='will be changed with server payload'" > Get Time </button>
+    <button onclick="emitLatestTime()" > Get Time </button>
     <p id="timestamp">The time now</p>
     <script src="/socket.js"></script>
   </body>
